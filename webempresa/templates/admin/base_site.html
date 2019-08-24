@@ -1,0 +1,35 @@
+{% extends "admin/base.html" %}
+
+{% load static %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block extrastyle %}
+<style>
+    #header { background: #1c1c1c;}
+    .module h2, .module caption, .inline-group h2 {
+    margin: 0;
+    padding: 8px;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: left;
+    background: #1c1c1c;
+    color: #fff;
+}
+</style>
+
+{% endblock %}
+
+
+{% block branding %}
+    <h1 id="site-name">
+        <a href="{% url 'admin:index' %}">
+            <img src = "{% static 'turk.png' %}" height = '40px' />
+        </a>
+
+    </h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+
